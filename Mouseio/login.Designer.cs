@@ -37,13 +37,14 @@
             this.buttonConnection = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.labelWelcome.Location = new System.Drawing.Point(239, 85);
+            this.labelWelcome.Location = new System.Drawing.Point(239, 44);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(247, 37);
             this.labelWelcome.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             // textBoxUserName
             // 
-            this.textBoxUserName.Location = new System.Drawing.Point(363, 190);
+            this.textBoxUserName.Location = new System.Drawing.Point(252, 187);
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(140, 20);
             this.textBoxUserName.TabIndex = 2;
@@ -62,7 +63,7 @@
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.labelUserName.Location = new System.Drawing.Point(217, 185);
+            this.labelUserName.Location = new System.Drawing.Point(106, 182);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(140, 24);
             this.labelUserName.TabIndex = 3;
@@ -72,7 +73,7 @@
             // 
             this.labelCode.AutoSize = true;
             this.labelCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.labelCode.Location = new System.Drawing.Point(275, 221);
+            this.labelCode.Location = new System.Drawing.Point(164, 218);
             this.labelCode.Name = "labelCode";
             this.labelCode.Size = new System.Drawing.Size(82, 24);
             this.labelCode.TabIndex = 4;
@@ -80,7 +81,7 @@
             // 
             // textBoxCode
             // 
-            this.textBoxCode.Location = new System.Drawing.Point(363, 226);
+            this.textBoxCode.Location = new System.Drawing.Point(252, 223);
             this.textBoxCode.MaxLength = 8;
             this.textBoxCode.Name = "textBoxCode";
             this.textBoxCode.PasswordChar = '*';
@@ -117,11 +118,18 @@
             this.timer.Interval = 500;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(480, 137);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 8;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 427);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonConnection);
             this.Controls.Add(this.textBoxCode);
@@ -147,6 +155,7 @@
         private System.Windows.Forms.Button buttonConnection;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
 

@@ -11,7 +11,8 @@ namespace Mouseio
     public partial class foreign_beaches : Mouseio.greek_beaches
     {
 
-        public foreign_beaches()
+        public foreign_beaches(choice parent_form)
+            : base(parent_form)
         {
             beaches = new Beach[] 
             {

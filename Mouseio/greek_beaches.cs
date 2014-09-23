@@ -14,13 +14,14 @@ namespace Mouseio
 {
     public partial class greek_beaches : Form
     {
+        private choice parent_form_; //For controlling the parent form
 
         protected uint beaches_num;
         protected uint beaches_current;
 
         protected Beach[] beaches;
-              
-        public greek_beaches()
+
+        public greek_beaches(choice parent_form)
         {
             beaches = new Beach[]
             {
@@ -33,6 +34,7 @@ namespace Mouseio
             };
 
             InitializeComponent();
+            parent_form_ = parent_form;
             initiliazeBeach();
         }
 
@@ -49,6 +51,14 @@ namespace Mouseio
 
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
+            try
+            {
+                parent_form_.Location = this.Location;
+            }
+            catch (InvalidCastException exception)
+            {
+
+            }
             this.Close();
         }
 

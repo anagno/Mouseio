@@ -42,16 +42,23 @@ namespace Mouseio
             }
             else
             {
-                choice myform = new choice();
-                this.Hide();
-                myform.ShowDialog();
-                this.Show();
+                try
+                {
+                    choice myform = new choice(this);
+                    this.Hide();
+                    myform.Location = this.Location;
+                    myform.ShowDialog();
+                    this.Show();
+                }
+                catch (ObjectDisposedException exception)
+                {
+
+                }
             }
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
             Application.Exit();
         }
 

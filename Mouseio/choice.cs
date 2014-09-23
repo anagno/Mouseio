@@ -15,28 +15,14 @@ namespace Mouseio
         // Music Player variable. Για να μην έχουμε απόλυτα μονοπάτια θα πρέπει να προστίθενται
         // οι τυχόν επιλογές στο Resources.resx
         private System.Media.SoundPlayer music_player = new System.Media.SoundPlayer(Mouseio.Properties.Resources.song);
-  
 
-        public choice()
+        private login parent_form_; //For controlling the parent form
+
+        public choice(login parent_form)
         {
             InitializeComponent();
+            parent_form_ = parent_form;
             music_player.Play();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            greek_beaches myform = new greek_beaches();
-            this.Hide();
-            myform.ShowDialog();
-            this.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            foreign_beaches myform = new foreign_beaches();
-            this.Hide();
-            myform.ShowDialog();
-            this.Show();
         }
 
 
@@ -47,6 +33,14 @@ namespace Mouseio
 
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
+            try
+            {
+                parent_form_.Location = this.Location;
+            }
+            catch (InvalidCastException exception)
+            {
+
+            }
             this.Close();
         }
 
@@ -63,6 +57,24 @@ namespace Mouseio
         private void choice_FormClosed(object sender, FormClosedEventArgs e)
         {
             music_player.Stop();
+        }
+
+        private void buttonGreekBeaches_Click(object sender, EventArgs e)
+        {
+            greek_beaches myform = new greek_beaches(this);
+            this.Hide();
+            myform.Location = this.Location;
+            myform.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonForeignBeaches_Click(object sender, EventArgs e)
+        {
+            foreign_beaches myform = new foreign_beaches(this);
+            this.Hide();
+            myform.Location = this.Location;
+            myform.ShowDialog();
+            this.Show();
         }
 
     }

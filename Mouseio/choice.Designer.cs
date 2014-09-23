@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonGreekBeaches = new System.Windows.Forms.Button();
+            this.buttonForeignBeaches = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonGreekBeaches
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.Location = new System.Drawing.Point(91, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 54);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ελληνικές Παραλίες";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonGreekBeaches.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.buttonGreekBeaches.Location = new System.Drawing.Point(91, 101);
+            this.buttonGreekBeaches.Name = "buttonGreekBeaches";
+            this.buttonGreekBeaches.Size = new System.Drawing.Size(125, 54);
+            this.buttonGreekBeaches.TabIndex = 1;
+            this.buttonGreekBeaches.Text = "Ελληνικές Παραλίες";
+            this.buttonGreekBeaches.UseVisualStyleBackColor = true;
+            this.buttonGreekBeaches.Click += new System.EventHandler(this.buttonGreekBeaches_Click);
             // 
-            // button2
+            // buttonForeignBeaches
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button2.Location = new System.Drawing.Point(267, 101);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 54);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Παραλίες Εξωτερικού";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonForeignBeaches.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.buttonForeignBeaches.Location = new System.Drawing.Point(267, 101);
+            this.buttonForeignBeaches.Name = "buttonForeignBeaches";
+            this.buttonForeignBeaches.Size = new System.Drawing.Size(125, 54);
+            this.buttonForeignBeaches.TabIndex = 2;
+            this.buttonForeignBeaches.Text = "Παραλίες Εξωτερικού";
+            this.buttonForeignBeaches.UseVisualStyleBackColor = true;
+            this.buttonForeignBeaches.Click += new System.EventHandler(this.buttonForeignBeaches_Click);
             // 
             // buttonLogOut
             // 
@@ -111,10 +111,10 @@
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonLogOut);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonForeignBeaches);
+            this.Controls.Add(this.buttonGreekBeaches);
             this.Name = "choice";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Παραλίες";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.choice_FormClosed);
             this.ResumeLayout(false);
@@ -123,8 +123,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonGreekBeaches;
+        private System.Windows.Forms.Button buttonForeignBeaches;
         private System.Windows.Forms.Button buttonLogOut;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonPlay;
